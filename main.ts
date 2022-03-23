@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== "production") {
 const app = Express();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: "http://localhost:3000" }));
 
 // Generic middlewares - logging, body parsing, etc.
 app.use((req: Request, res: Response, next: NextFunction) => {
